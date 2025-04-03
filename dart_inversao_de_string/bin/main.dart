@@ -1,12 +1,17 @@
+import 'dart:io';
+
 void main() {
-  String word = "Gregory";
-  String temp = "";
+  print("Digite uma palavra para ser lida de trás para frente");
+  String word = stdin.readLineSync()!.toLowerCase();
+  print(word.myreverse());
+}
 
-  for (int i = word.length - 1; i >= 0; i--) {
-    print(word[i]);
-
-    temp = temp + word[i];
+extension StringExtension on String {
+  String myreverse() {
+    String word = "";
+    for (int i = length - 1; i >= 0; i--) {
+      word = word + this[i];
+    }
+    return word;
   }
-  word = temp;
-  print(word);
 }
