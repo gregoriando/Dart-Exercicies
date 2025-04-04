@@ -1,12 +1,13 @@
 import 'dart:io';
+import 'package:dart_par_ou_impar/even_odd.dart';
 
 void main() {
   print("Digite um número para verificar se ele é par ou impar");
   int number = int.parse(stdin.readLineSync()!);
+  EvenOdd evenOdd = EvenOdd(number: number);
 
-  if (number % 2 == 0) {
-    print("O número $number é par");
-  } else {
-    print("O número $number é impar");
-  }
+  CheckEvenOrOdd verify = evenOdd.checkParaty();
+  print(verify.message);
+  print(evenOdd.isEven());
+  print(evenOdd.isOdd());
 }
