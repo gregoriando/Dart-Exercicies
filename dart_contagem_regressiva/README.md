@@ -1,2 +1,1 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+Exercício de Contagem Regressiva que tem como objetivo mostrar como fazer esse tipo de contador usando o laço for a partir de um número que se recebe
