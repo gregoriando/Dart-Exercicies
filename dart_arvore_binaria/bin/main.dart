@@ -1,5 +1,4 @@
 import 'package:dart_arvore_binaria/binary_search_tree.dart';
-import 'package:dart_arvore_binaria/node.dart';
 
 void main() {
   BinarySearchTree tree = BinarySearchTree();
