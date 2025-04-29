@@ -1,14 +1,14 @@
 extension ListExtension on List<int> {
-  void insertionSort(List<int> numbers) {
-    for (int i = 1; i < numbers.length; i++) {
-      int actual = numbers[i];
+  void insertionSort() {
+    for (int i = 1; i < length; i++) {
+      int actual = this[i];
       int j = i - 1;
 
-      while (j >= 0 && numbers[j] > actual) {
-        numbers[j + 1] = numbers[j];
+      while (j >= 0 && this[j] > actual) {
+        this[j + 1] = this[j];
         j--;
       }
-      numbers[j + 1] = actual;
+      this[j + 1] = actual;
     }
   }
 }
