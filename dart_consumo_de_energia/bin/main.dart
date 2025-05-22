@@ -10,7 +10,13 @@ void main() {
   print('Taxa: ${bill.taxesbill}');
   print('ICMS: ${bill.icmsVal.toStringAsFixed(2)}');
   print('Cofins: ${bill.cofinsVal.toStringAsFixed(2)}');
-  print('A conta deu ${bill.totalWithGreenFlag().toStringAsFixed(2)}');
-  print('A conta deu ${bill.totalWithYellowFlag().toStringAsFixed(2)}');
-  print('A conta deu ${bill.totalWithRedFlag().toStringAsFixed(2)}');
+  print(
+    'A conta deu bandeira verde ${bill.totalWithGreenFlag().toStringAsFixed(2)}',
+  );
+  print(
+    'A conta deu bandeira amarela ${bill.totalWithYellowFlag().toStringAsFixed(2)}',
+  );
+  print(
+    'A conta deu bandeira vermelha ${bill.totalWithRedFlag().toStringAsFixed(2)}',
+  );
 }
