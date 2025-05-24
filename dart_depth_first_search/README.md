@@ -35,3 +35,13 @@ Este projeto implementa uma estrutura de grafo e o algoritmo de busca em profund
 ## Estrutura
 
 - `lib/graphs_dfs.dart`: Implementa toda a lógica da aplicação
+- `test/graphs_dfs_test.dart`: Contém os testes automatizados.
+
+## Testes
+
+Você precisará ter o Dart instalado e estar na raiz do projeto.
+Para rodar os testes:
+
+```sh
+dart run test
+```

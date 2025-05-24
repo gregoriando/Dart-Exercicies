@@ -33,3 +33,13 @@ Este projeto implementa uma classe para verificar se um número é par ou ímpar
 ## Estrutura
 
 - `lib/even_odd.dart`: Implementa toda a lógica da aplicação
+- `test/even_odd_test.dart`: Contém os testes automatizados.
+
+## Testes
+
+Você precisará ter o Dart instalado e estar na raiz do projeto.
+Para rodar os testes:
+
+```sh
+dart run test
+```

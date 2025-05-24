@@ -25,3 +25,12 @@ Este projeto implementa o algoritmo de ordenação Merge Sort em Dart, permitind
 ## Estrutura
 
 - `bin/main.dart`: Implementa toda a lógica da aplicação.
+
+## Testes
+
+Você precisará ter o Dart instalado e estar na raiz do projeto.
+Para rodar os testes (se existirem):
+
+```sh
+dart run test
+```

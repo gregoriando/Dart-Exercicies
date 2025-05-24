@@ -34,3 +34,13 @@ Este projeto implementa o algoritmo de busca de padrões Knuth-Morris-Pratt (KMP
 ## Estrutura
 
 - `lib/knuth_morris_pratt.dart`: Implementa toda a lógica da aplicação
+- `test/knuth_morris_pratt_test.dart`: Contém os testes automatizados.
+
+## Testes
+
+Você precisará ter o Dart instalado e estar na raiz do projeto.
+Para rodar os testes:
+
+```sh
+dart run test
+```

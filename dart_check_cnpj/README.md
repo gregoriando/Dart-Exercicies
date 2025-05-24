@@ -23,14 +23,14 @@ Este projeto implementa uma classe para validação de CNPJ (Cadastro Nacional d
     ```dart
     import 'package:dart_check_cnpj/check_cnpj.dart';
 
-   void main() {
-  String cnpj = '58.131.582/0001-25';
-  String cnpj2 = '11.111.111/1111-11';
+    void main() {
+      String cnpj = '58.131.582/0001-25';
+      String cnpj2 = '11.111.111/1111-11';
 
-  print(CheckCnpj.validadeCnpj(cnpj));
-  print(CheckCnpj.validadeCnpj(cnpj2));
-} 
-```
+      print(CheckCnpj.validadeCnpj(cnpj));
+      print(CheckCnpj.validadeCnpj(cnpj2));
+    }
+    ```
 
 ## Estrutura
 
@@ -39,7 +39,7 @@ Este projeto implementa uma classe para validação de CNPJ (Cadastro Nacional d
 
 ## Testes
 
-Você precisará ter o dart instalado e estar na raiz do projeto.
+Você precisará ter o Dart instalado e estar na raiz do projeto.
 Para rodar os testes:
 
 ```sh

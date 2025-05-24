@@ -32,3 +32,13 @@ Este projeto implementa uma extensão para listas de inteiros em Dart, adicionan
 ## Estrutura
 
 - `lib/int_extesion.dart`: Implementa toda a lógica da aplicação
+- `test/int_extesion_test.dart`: Contém os testes automatizados.
+
+## Testes
+
+Você precisará ter o Dart instalado e estar na raiz do projeto.
+Para rodar os testes:
+
+```sh
+dart run test
+```
