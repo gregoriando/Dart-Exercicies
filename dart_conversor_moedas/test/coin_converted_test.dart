@@ -1,4 +1,4 @@
-import 'package:dart_currency_converter/coin_converted.dart';
+import 'package:dart_conversor_moedas/coin_converted.dart';
 import 'package:test/test.dart';
 
 void main() {
