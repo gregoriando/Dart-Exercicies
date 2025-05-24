@@ -29,8 +29,8 @@ Este projeto implementa uma classe para validação de CNPJ (Cadastro Nacional d
 
   print(CheckCnpj.validadeCnpj(cnpj));
   print(CheckCnpj.validadeCnpj(cnpj2));
-}
-    ```
+} 
+```
 
 ## Estrutura
 
