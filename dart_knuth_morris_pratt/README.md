@@ -1,30 +1,36 @@
-Função KMP(texto, padrão):
-    prefixo = calcularPrefixo(padrão)
-    i = 0 // índice no texto
-    j = 0 // índice no padrão
+# Algoritmo Knuth-Morris-Pratt (KMP) em Dart
 
-    Enquanto i < tamanho(texto):
-        Se texto[i] == padrão[j]:
-            i = i + 1
-            j = j + 1
-            Se j == tamanho(padrão):
-                imprimir "Padrão encontrado na posição", i - j
-                j = prefixo[j - 1] // continua procurando
-        Senão:
-            Se j > 0:
-                j = prefixo[j - 1]
-            Senão:
-                i = i + 1
+Este projeto implementa o algoritmo de busca de padrões Knuth-Morris-Pratt (KMP) em Dart, permitindo encontrar todas as ocorrências de um padrão dentro de um texto de forma eficiente.
 
-Função calcularPrefixo(padrão):
-    prefixo = vetor de tamanho igual ao padrão, inicializado com zeros
-    j = 0
+## Funcionalidades
 
-    Para i de 1 até tamanho(padrão) - 1:
-        Enquanto j > 0 e padrão[i] != padrão[j]:
-            j = prefixo[j - 1]
-        Se padrão[i] == padrão[j]:
-            j = j + 1
-        prefixo[i] = j
+- Busca todas as ocorrências de um padrão em um texto usando o algoritmo KMP.
+- Exibe as posições onde o padrão foi encontrado.
+- Implementação eficiente utilizando o vetor de prefixo (lps).
 
-    Retorna prefixo
+## Como usar
+
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/gregoriando/Dart-Exercicies.git
+    ```
+2. Navegue até a pasta do projeto:
+    ```sh
+    cd Dart-Exercicies/dart_knuth_morris_pratt
+    ```
+3. Importe a classe `KnuthMorrisPratt` no seu código Dart:
+    ```dart
+    import 'package:dart_knuth_morris_pratt/knuth_morris_pratt.dart';
+
+    void main() {
+      var kmp = KnuthMorrisPratt(
+        text: 'ababcabcabababd',
+        pattern: 'ababd',
+      );
+      kmp.kmp(); // Saída: Padrão encontrado na posição: 10
+    }
+    ```
+
+## Estrutura
+
+- `lib/knuth_morris_pratt.dart`: Implementa toda a lógica da aplicação

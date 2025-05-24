@@ -1,22 +1,28 @@
-Este exercício tem como objetivo converter um número decimal para sua representação binária.
+# Conversão de Decimal para Binário em Dart
 
-🛠 Lógica utilizada:
+Este projeto é um conversor simples de números decimais para binários, feito em Dart. O usuário informa um número decimal e o programa retorna sua representação em binário.
 
-Um laço for é usado para dividir repetidamente o número decimal por 2 até que ele chegue a zero.
+## Funcionalidades
 
-A cada iteração, o resto da divisão é armazenado.
+- Lê um número decimal informado pelo usuário via terminal.
+- Converte o número decimal para binário utilizando lógica própria.
+- Exibe o resultado da conversão no terminal.
 
-Os restos obtidos são então concatenados de forma invertida, formando o número binário correspondente.
+## Como usar
 
-Por fim, o programa exibe na tela o resultado da conversão.
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/gregoriando/Dart-Exercicies.git
+    ```
+2. Navegue até a pasta do projeto:
+    ```sh
+    cd Dart-Exercicies/dart_conversao_de_base
+    ```
+3. Execute o programa principal:
+    ```sh
+    dart run bin/main.dart
+    ```
 
-Esse tipo de exercício é ótimo para praticar:
+## Estrutura
 
-Manipulação de variáveis
-
-Laços de repetição
-
-Operações matemáticas básicas
-
-Lógica de algoritmos
-
+- `bin/main.dart`: Implementa toda a lógica da aplicação.

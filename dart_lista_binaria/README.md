@@ -1,31 +1,34 @@
-INICIO
+# Extensão de Lista com Busca Binária em Dart
 
-  // Lista e número a ser buscado
-  lista <- [1, 3, 5, 7, 9, 11]
-  numero <- 7
+Este projeto implementa uma extensão para listas de inteiros em Dart, adicionando o método de busca binária (`binarySearch`) diretamente à lista.
 
-  // Chamada da função de busca binária
-  resultado <- BuscaBinaria(lista, numero)
+## Funcionalidades
 
-  ESCREVA "O índice do número procurado é: ", resultado
+- Permite realizar busca binária em listas de inteiros ordenadas.
+- Retorna o índice do elemento encontrado ou -1 caso o elemento não exista na lista.
+- Utiliza extensão (`extension`) para adicionar o método `binarySearch()` à classe `List<int>`.
 
-FIM
+## Como usar
 
-FUNÇÃO BuscaBinaria(lista, numero)
-  inicio <- 0
-  fim <- tamanho(lista) - 1
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/gregoriando/Dart-Exercicies.git
+    ```
+2. Navegue até a pasta do projeto:
+    ```sh
+    cd Dart-Exercicies/dart_lista_binaria
+    ```
+3. Importe a extensão no seu código Dart:
+    ```dart
+    import 'package:dart_lista_binaria/int_extesion.dart';
 
-  ENQUANTO inicio <= fim FAÇA
-    meio <- (inicio + fim) DIV 2
+    void main() {
+      List<int> numeros = [1, 3, 5, 7, 9, 11, 13];
+      int indice = numeros.binarySearch(7);
+      print(indice); // 3
+    }
+    ```
 
-    SE lista[meio] = numero ENTÃO
-      RETORNE meio
-    SENÃO SE lista[meio] < numero ENTÃO
-      inicio <- meio + 1
-    SENÃO
-      fim <- meio - 1
-    FIM SE
-  FIM ENQUANTO
+## Estrutura
 
-  RETORNE -1
-FIM FUNÇÃO
+- `lib/int_extesion.dart`: Implementa toda a lógica da aplicação

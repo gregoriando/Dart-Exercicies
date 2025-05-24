@@ -1,76 +1,47 @@
-class Node {
-    int value;
-    Node left, right;
+# Árvore Binária de Busca (Binary Search Tree) em Dart
 
-    Node(int value) {
-        this.value = value;
-        left = right = null;
-    }
+Este projeto implementa uma Árvore Binária de Busca (BST) em Dart, permitindo as seguintes operações:
+
+- Inserção de valores na árvore
+- Busca de valores na árvore
+- Impressão dos valores em pré-ordem (preOrder)
+
+A estrutura foi organizada em classes para facilitar a manutenção e a expansão do código.
+
+## Como usar
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/gregoriando/Dart-Exercicies.git
+    ```
+2. Navegue até a pasta do projeto:
+    ```sh
+    cd Dart-Exercicies/dart_arvore_binaria
+    ```
+3. Importe as classes `BinarySearchTree` e `Node` no seu código Dart:
+    ```dart
+    import 'package:dart_arvore_binaria/binary_search_tree.dart';
+    import 'package:dart_arvore_binaria/node.dart';
+
+    void main() {
+  BinarySearchTree tree = BinarySearchTree();
+  tree.insert(10);
+  tree.insert(5);
+  tree.insert(15);
+  tree.insert(12);
+  tree.insert(35);
+  tree.insert(1);
+
+  print("Pré-oderm:");
+  tree.preOrder();
 }
-class BinarySearchTree {
-    Node root;
+    ```
+## Funcionalidades
 
-    // Inserção
-    void insert(int value) {
-        root = insertRec(root, value);
-    }
+- **insert(int value):** Insere um valor na árvore.
+- **search(int value):** Retorna `true` se o valor estiver na árvore, `false` caso contrário.
+- **preOrder():** Imprime os valores da árvore em pré-ordem.
 
-    Node insertRec(Node root, int value) {
-        if (root == null) {
-            return new Node(value);
-        }
+## Estrutura
 
-        if (value < root.value) {
-            root.left = insertRec(root.left, value);
-        } else if (value > root.value) {
-            root.right = insertRec(root.right, value);
-        }
-
-        return root;
-    }
-
-    // Busca
-    boolean search(int value) {
-        return searchRec(root, value);
-    }
-
-    boolean searchRec(Node root, int value) {
-        if (root == null) return false;
-        if (root.value == value) return true;
-
-        return (value < root.value)
-            ? searchRec(root.left, value)
-            : searchRec(root.right, value);
-    }
-
-    // Pré-ordem
-    void preOrder() {
-        preOrderRec(root);
-        System.out.println();
-    }
-
-    void preOrderRec(Node root) {
-        if (root != null) {
-            System.out.print(root.value + " ");
-            preOrderRec(root.left);
-            preOrderRec(root.right);
-        }
-    }
-}
-public class Main {
-    public static void main(String[] args) {
-        BinarySearchTree tree = new BinarySearchTree();
-
-        tree.insert(10);
-        tree.insert(5);
-        tree.insert(15);
-        tree.insert(3);
-        tree.insert(7);
-
-        System.out.println("Pré-ordem:");
-        tree.preOrder(); // Deve mostrar: 10 5 3 7 15
-
-        System.out.println("Buscar 7: " + tree.search(7));   // true
-        System.out.println("Buscar 20: " + tree.search(20)); // false
-    }
-}
+- `lib/binary_search_tree.dart`: Implementação da árvore binária de busca.
+- `lib/node.dart`: Definição do nó da árvore.

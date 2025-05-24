@@ -1,34 +1,27 @@
-função mergeSort(lista)
-    se tamanho(lista) ≤ 1
-        retorne lista
+# Merge Sort em Dart
 
-    meio ← tamanho(lista) / 2
-    esquerda ← mergeSort(lista[0 até meio - 1])
-    direita ← mergeSort(lista[meio até fim])
+Este projeto implementa o algoritmo de ordenação Merge Sort em Dart, permitindo ordenar listas de inteiros de forma eficiente.
 
-    retorne merge(esquerda, direita)
-fim função
+## Funcionalidades
 
-função merge(esquerda, direita)
-    resultado ← lista vazia
-    i ← 0
-    j ← 0
+- Ordena listas de inteiros utilizando o algoritmo Merge Sort.
+- Exibe a lista original e a lista ordenada no terminal.
 
-    enquanto i < tamanho(esquerda) e j < tamanho(direita)
-        se esquerda[i] ≤ direita[j]
-            resultado.adicionar(esquerda[i])
-            i ← i + 1
-        senão
-            resultado.adicionar(direita[j])
-            j ← j + 1
+## Como usar
 
-    enquanto i < tamanho(esquerda)
-        resultado.adicionar(esquerda[i])
-        i ← i + 1
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/gregoriando/Dart-Exercicies.git
+    ```
+2. Navegue até a pasta do projeto:
+    ```sh
+    cd Dart-Exercicies/dart_merge_sort
+    ```
+3. Execute o programa principal:
+    ```sh
+    dart run bin/main.dart
+    ```
 
-    enquanto j < tamanho(direita)
-        resultado.adicionar(direita[j])
-        j ← j + 1
+## Estrutura
 
-    retorne resultado
-fim função
+- `bin/main.dart`: Implementa toda a lógica da aplicação.

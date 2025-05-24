@@ -1,5 +1,36 @@
-Esse exercício tem como objetivo contar o número de caracteres de uma string.
+# Contador de Caracteres em Dart
 
-Ele poderia ter sido feito de uma forma mais simples, utilizando o método length para obter diretamente o tamanho da string. No entanto, foi utilizada uma abordagem com um contador manual, para mostrar de forma mais explícita como o programa se comporta internamente.
+Este projeto é um contador simples de caracteres em Dart. O usuário digita uma palavra ou frase e o programa retorna o número de caracteres digitados.
 
-Essa forma menos sofisticada permite entender passo a passo o funcionamento da contagem, o que é útil para fins didáticos e para reforçar a lógica de programação.
+## Funcionalidades
+
+- Lê uma palavra ou frase do usuário via terminal.
+- Conta e exibe o número total de caracteres digitados.
+
+## Como usar
+
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/gregoriando/Dart-Exercicies.git
+    ```
+2. Navegue até a pasta do projeto:
+    ```sh
+    cd Dart-Exercicies/dart_contagem_de_caracteres
+    ```
+3. Execute o programa principal:
+    ```sh
+    dart run bin/main.dart
+    ```
+
+## Estrutura
+
+- `bin/main.dart`: Implementa toda a lógica da aplicação.
+
+## Testes
+
+Você precisará ter o Dart instalado e estar na raiz do projeto.
+Para rodar os testes (se existirem):
+
+```sh
+dart run test
+```

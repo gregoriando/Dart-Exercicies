@@ -1,19 +1,38 @@
-Para se calcular potência nós precisamos fazer com que a base seja mutiplicada por ela mesma pelo número do expoente.
-Se o expoente for 0 então o resultado é 1
-Se o expoente é 1 então retorna a base.
+# Potência Recursiva em Dart
 
-Quando usamos recursividade é dessa forma que acontece:
-Nós chamamos a base * função(base, expoente - 1).
-Em uma função recursiva nós sempre tentamos chegar no menor para conseguir alcançar o maior
+Este projeto implementa uma função para calcular a potência de um número (base^expoente) de forma recursiva em Dart, suportando expoentes positivos, negativos e zero.
 
-exemplo:
+## Funcionalidades
 
-base = 2, expoente = 3;
+- Calcula a potência de um número inteiro usando recursão.
+- Suporta expoentes positivos, negativos e zero.
+- Retorna o resultado como `double`.
 
-2 * função(2, 2) 
-2 * função(2,1) como a função retornou um expoente 1 e essa seria a condição para retornar a base, então a função para de andar
-de trás para frente, para resolver a função ou seja.
+## Como usar
 
-2 * 2 = 4
-2 * 4 = 8 Esse 4 seria o retorno da função já resolvida.
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/gregoriando/Dart-Exercicies.git
+    ```
+2. Navegue até a pasta do projeto:
+    ```sh
+    cd Dart-Exercicies/dart_potencia_recursiva
+    ```
+3. Execute o programa principal:
+    ```sh
+    dart run bin/main.dart
+    ```
 
+## Estrutura
+
+- `bin/main.dart`: Implementa toda a lógica da aplicação.
+- `test/main_test.dart`: Contém os testes automatizados (adicione se desejar).
+
+## Testes
+
+Você precisará ter o Dart instalado e estar na raiz do projeto.
+Para rodar os testes (se existirem):
+
+```sh
+dart run test
+```

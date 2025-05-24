@@ -1,27 +1,28 @@
-🔁 Inversão de String com Contador + Extension
-Este exercício tem como objetivo mostrar diferentes formas de inverter uma String e, ao mesmo tempo, explorar conceitos importantes como lógica de programação e extensions em Dart.
+# Inversor de String em Dart
 
-Inicialmente, poderia ter sido usado o método .split().reversed.join(), ou algo semelhante, que é uma forma mais simples e direta de inverter uma string. Porém, optei por fazer uma implementação manual, usando:
+Este projeto é um programa simples em Dart que lê uma palavra do usuário e exibe essa palavra invertida, utilizando uma extensão personalizada para a classe `String`.
 
-Um laço de repetição com contagem regressiva (for de trás pra frente).
+## Funcionalidades
 
-Uma variável acumuladora, que recebia letra por letra da string original, em ordem inversa.
+- Lê uma palavra digitada pelo usuário via terminal.
+- Inverte a palavra utilizando o método `myreverse()` implementado como extensão de `String`.
+- Exibe o resultado invertido no terminal.
 
-Essa abordagem tem o objetivo de reforçar o entendimento do funcionamento dos loops e da manipulação de strings em nível básico.
+## Como usar
 
-🧩 Extension de String
-Após isso, o exercício foi evoluído com a criação de uma extension da classe String, encapsulando a lógica de inversão dentro de um método personalizado.
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/gregoriando/Dart-Exercicies.git
+    ```
+2. Navegue até a pasta do projeto:
+    ```sh
+    cd Dart-Exercicies/dart_inversao_de_string
+    ```
+3. Execute o programa principal:
+    ```sh
+    dart run bin/main.dart
+    ```
 
-Essa etapa foi importante para aprender a:
+## Estrutura
 
-Criar métodos personalizados para tipos nativos (como String).
-
-Tornar o código mais reutilizável e limpo.
-
-Entender como extensions podem ser aplicadas em cenários reais, como por exemplo:
-
-Criar métodos específicos para manipular cores (Color).
-
-Padronizar estilos de texto (title, size, bold etc).
-
-Evitar repetição de código.
+- `bin/main.dart`: Implementa toda a lógica da aplicação.

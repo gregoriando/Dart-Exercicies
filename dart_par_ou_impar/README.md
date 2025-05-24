@@ -1,17 +1,35 @@
-🔢 Verificando se um Número é Par ou Ímpar com Classe e Enum
-Neste exercício, começamos com uma lógica simples: receber um número e verificar se ele é par ou ímpar.
+# Par ou Ímpar em Dart
 
-Depois de implementar essa verificação básica, evoluímos o código criando uma classe personalizada que recebe o número como parâmetro e oferece métodos para realizar essa checagem.
+Este projeto implementa uma classe para verificar se um número é par ou ímpar em Dart, utilizando enumerações para facilitar a identificação e exibição de mensagens.
 
-✅ O que foi feito:
-Criação de uma classe para encapsular a lógica.
+## Funcionalidades
 
-Implementação de um enum para representar o resultado da verificação (Par ou Impar), tornando o retorno mais expressivo e seguro.
+- Verifica se um número é par ou ímpar.
+- Retorna um enum com mensagem personalizada para cada caso.
+- Métodos utilitários para verificar se o número é par (`isEven`) ou ímpar (`isOdd`).
 
-Adição de dois métodos booleanos:
+## Como usar
 
-isEven() → retorna true se o número for par.
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/gregoriando/Dart-Exercicies.git
+    ```
+2. Navegue até a pasta do projeto:
+    ```sh
+    cd Dart-Exercicies/dart_par_ou_impar
+    ```
+3. Importe a classe `EvenOdd` e o enum `CheckEvenOrOdd` no seu código Dart:
+    ```dart
+    import 'package:dart_par_ou_impar/even_odd.dart';
 
-isOdd() → retorna true se o número for ímpar.
+    void main() {
+      var numero = EvenOdd(number: 7);
+      print(numero.checkParaty().message); // O número é ímpar
+      print(numero.isEven()); // false
+      print(numero.isOdd());  // true
+    }
+    ```
 
-Essa abordagem ajuda a reforçar conceitos de orientação a objetos, uso de enums e boas práticas na organização do código, deixando tudo mais reutilizável e fácil de manter.
+## Estrutura
+
+- `lib/even_odd.dart`: Implementa toda a lógica da aplicação

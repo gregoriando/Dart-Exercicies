@@ -1,41 +1,37 @@
-import java.util.*;
+# Busca em Profundidade (DFS) em Grafos com Dart
 
-public class GraphDFS {
-    private Map<String, List<String>> graph = new HashMap<>();
-    private Set<String> visited = new HashSet<>();
+Este projeto implementa uma estrutura de grafo e o algoritmo de busca em profundidade (Depth-First Search - DFS) em Dart.
 
-    // Adiciona arestas
-    public void addEdge(String src, String dest) {
-        graph.putIfAbsent(src, new ArrayList<>());
-        graph.putIfAbsent(dest, new ArrayList<>());
-        graph.get(src).add(dest);
-        graph.get(dest).add(src); // Grafo não direcionado
+## Funcionalidades
+
+- Criação de grafos não direcionados usando listas de adjacência.
+- Adição de arestas entre os nós do grafo.
+- Execução do algoritmo DFS a partir de um nó inicial, exibindo a ordem de visitação.
+
+## Como usar
+
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/gregoriando/Dart-Exercicies.git
+    ```
+2. Navegue até a pasta do projeto:
+    ```sh
+    cd Dart-Exercicies/dart_depth_first_search
+    ```
+3. Importe a classe `GraphsDfs` no seu código Dart:
+    ```dart
+    import 'package:dart_depth_first_search/graphs_dfs.dart';
+
+    void main() {
+      var grafo = GraphsDfs();
+      grafo.addEdge('A', 'B');
+      grafo.addEdge('A', 'C');
+      grafo.addEdge('B', 'D');
+      grafo.addEdge('C', 'E');
+      grafo.dfs('A'); // Saída: A B D C E
     }
+    ```
 
-    // Função principal do DFS
-    public void dfs(String node) {
-        if (visited.contains(node)) return;
+## Estrutura
 
-        System.out.print(node + " ");
-        visited.add(node);
-
-        for (String neighbor : graph.get(node)) {
-            dfs(neighbor);
-        }
-    }
-
-    public static void main(String[] args) {
-        GraphDFS g = new GraphDFS();
-
-        // Criando o grafo do exemplo
-        g.addEdge("A", "B");
-        g.addEdge("A", "C");
-        g.addEdge("B", "D");
-        g.addEdge("C", "E");
-        g.addEdge("E", "F");
-
-        System.out.print("DFS a partir do nó A: ");
-        g.dfs("A");
-    }
-}
-
+- `lib/graphs_dfs.dart`: Implementa toda a lógica da aplicação
