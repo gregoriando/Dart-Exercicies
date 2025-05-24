@@ -1,6 +1,6 @@
 # Analisador de Texto
 
-Este projeto é um analisador de texto. Com ele, você pode:
+Este projeto é um analisador de texto em Dart. Com ele, você pode:
 
 - Inverter o texto
 - Contar quantas letras o texto possui
@@ -25,25 +25,23 @@ O programa foi elaborado com testes automatizados e organizado em classes para g
     import 'package:dart_analisador_de_texto/modify_text.dart';
 
     void main() {
-  String text = 'Esse aqui é meu esse ou tro tro tro é é aqui aqui aqui';
-  print('texto invertido: ${ModifyText.reverseText(text)}');
-  print('O texto tem: ${ModifyText.countLetters(text)} Letras');
-  print('O texto inteiro em minusculo: ${ModifyText.wordsToLowerCase(text)}');
-  print('Contador de palavras: ${ModifyText.countWords(text)}');
-  print(
-    'Contagem de palavras iguais: ${ModifyText.countFrequencyOfWords(text)}',
-  );
+      String text = 'Esse aqui é meu esse ou tro tro tro é é aqui aqui aqui';
+      print('Texto invertido: ${ModifyText.reverseText(text)}');
+      print('O texto tem: ${ModifyText.countLetters(text)} letras');
+      print('O texto inteiro em minúsculo: ${ModifyText.wordsToLowerCase(text)}');
+      print('Contador de palavras: ${ModifyText.countWords(text)}');
+      print('Contagem de palavras iguais: ${ModifyText.countFrequencyOfWords(text)}');
     }
     ```
 
 ## Estrutura
- 
- - `lib/modify_text.dart`: Implementa toda a lógica da aplicação
+
+- `lib/modify_text.dart`: Implementa toda a lógica da aplicação
 - `test/modify_text_test.dart`: Contém os testes automatizados.
 
 ## Testes
 
-Você precisará ter o dart instalado e estar na raiz do projeto.
+Você precisará ter o Dart instalado e estar na raiz do projeto.  
 Para rodar os testes:
 
 ```sh
