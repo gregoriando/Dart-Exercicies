@@ -6,9 +6,9 @@ class CheckCreditCard {
     if (creditCard.length != 16 || RegExp(r'^(\d)\1*$').hasMatch(creditCard)) {
       return false;
     } else {
-      int validate = 0;
+      var validate = 0;
       for (var i = 0; i < creditCard.length; i++) {
-        int digit = int.parse(creditCard[i]);
+        var digit = int.parse(creditCard[i]);
 
         if (i % 2 != 0) {
           digit = digit * 2;

@@ -1,5 +1,7 @@
+import 'dart:io';
+
 void main() {
-  print(power(2, expoent: -1));
+  stdout.writeln(power(2, expoent: -1));
 }
 
 double power(int base, {required int expoent}) {

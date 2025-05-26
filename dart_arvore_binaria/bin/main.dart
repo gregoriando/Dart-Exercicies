@@ -1,7 +1,9 @@
+import 'dart:io';
+
 import 'package:dart_arvore_binaria/binary_search_tree.dart';
 
 void main() {
-  BinarySearchTree tree = BinarySearchTree();
+  final tree = BinarySearchTree();
   tree.insert(10);
   tree.insert(5);
   tree.insert(15);
@@ -9,6 +11,6 @@ void main() {
   tree.insert(35);
   tree.insert(1);
 
-  print("Pré-oderm:");
+  stdout.writeln('Pré-oderm:');
   tree.preOrder();
 }

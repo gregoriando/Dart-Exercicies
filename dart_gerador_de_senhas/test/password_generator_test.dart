@@ -2,8 +2,8 @@ import 'package:dart_gerador_de_senhas/password_generator.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group("Testando a Classe PasswordGenerator", () {
-    test("Deve lançar uma exeção se caractere < 8", () {
+  group('Testando a Classe PasswordGenerator', () {
+    test('Deve lançar uma exeção se caractere < 8', () {
       expect(
         () => PasswordGenerator.generatePassword(
           numberOfCharacters: 7,
@@ -16,13 +16,13 @@ void main() {
           predicate(
             (e) =>
                 e is ArgumentError &&
-                e.message == "A senha deve ter pelo menos 8 caracteres",
+                e.message == 'A senha deve ter pelo menos 8 caracteres',
           ),
         ),
       );
     });
 
-    test("Deve lançar uma exeção se caracter vazio", () {
+    test('Deve lançar uma exeção se caracter vazio', () {
       expect(
         () => PasswordGenerator.generatePassword(
           numberOfCharacters: 12,
@@ -36,13 +36,13 @@ void main() {
             (e) =>
                 e is ArgumentError &&
                 e.message ==
-                    "Você Precisa Adicionar pelo menos um Caracter na Lista",
+                    'Você Precisa Adicionar pelo menos um Caracter na Lista',
           ),
         ),
       );
     });
-    test("Retornar o password", () {
-      String password = PasswordGenerator.generatePassword(
+    test('Retornar o password', () {
+      final password = PasswordGenerator.generatePassword(
         numberOfCharacters: 12,
         addUpperCase: true,
         addlowerCase: true,

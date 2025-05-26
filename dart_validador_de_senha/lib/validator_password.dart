@@ -1,17 +1,15 @@
 class ValidatorPassword {
-  static void checkAndPrint(String password) {
+  static List<String> check(String password) {
     final errors = validate(password);
 
     if (errors.isNotEmpty) {
-      print("Senha inválida");
-      errors.forEach(print);
-    } else {
-      print('Senha válida');
+      return ['Senha inválida', ...errors];
     }
+    return ['Senha válida'];
   }
 
   static List<String> validate(String password) {
-    final List<String> errors = [];
+    final errors = <String>[];
     if (password.isEmpty) {
       errors.add('Sua senha não pode ser vazia');
     }

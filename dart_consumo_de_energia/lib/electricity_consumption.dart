@@ -13,8 +13,8 @@ class ElectricityConsumption {
   // usar o get ajuda a sempre atualizar com os valores atuais
 
   double _applyFlagCharge(double ratePer100) {
-    int hundredTaxes = (totalWithTaxes / 100).floor();
-    double numberOfTimes = hundredTaxes * ratePer100;
+    final hundredTaxes = (totalWithTaxes / 100).floor();
+    final numberOfTimes = hundredTaxes * ratePer100;
     return totalWithTaxes + numberOfTimes;
   }
 

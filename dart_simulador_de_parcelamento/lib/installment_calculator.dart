@@ -6,7 +6,7 @@ class InstallmentCalculator {
   InstallmentCalculator({required this.value, required this.installmentNumber});
 
   Map<String, List<double>> calculateInstallments() {
-    for (int i = 1; i <= 18; i++) {
+    for (var i = 1; i <= 18; i++) {
       double tt;
       if (i >= 1 && i <= 10) {
         tt = value;
@@ -33,8 +33,8 @@ class InstallmentCalculator {
   }
 
   String printInstallmentsOptions() {
-    String showInstallment = '';
-    for (int i = 0; i < result['installments']!.length; i++) {
+    var showInstallment = '';
+    for (var i = 0; i < result['installments']!.length; i++) {
       showInstallment +=
           "Em ${i + 1}x de R\$${result['installments']?[i].toStringAsFixed(2)} , Total: R\$${result['total']?[i].toStringAsFixed(2)}\n";
     }

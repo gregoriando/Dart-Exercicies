@@ -1,9 +1,15 @@
+import 'dart:io';
+
 import 'package:dart_validador_de_senha/validator_password.dart';
 
 void main() {
-  String pass = "#Batatinha!@#4";
-  String password = 'gregory';
+  const pass = '#Batatinha!@#4';
+  const password = 'gregory';
 
-  ValidatorPassword.checkAndPrint(password);
-  ValidatorPassword.checkAndPrint(pass);
+  for (final message in ValidatorPassword.check(password)) {
+    stdout.writeln(message);
+  }
+  for (final message in ValidatorPassword.check(pass)) {
+    stdout.writeln(message);
+  }
 }

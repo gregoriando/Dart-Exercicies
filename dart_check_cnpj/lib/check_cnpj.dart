@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class CheckCnpj {
   static bool validadeCnpj(String cnpj) {
     cnpj = cnpj.replaceAll(RegExp(r'[^0-9]'), '');
@@ -11,7 +13,7 @@ class CheckCnpj {
       throw ArgumentError('Não pode usar os mesmo números');
     }
 
-    int sum = 0;
+    var sum = 0;
 
     for (var i = 0; i < 12; i++) {
       if (i <= 3) {
@@ -20,10 +22,10 @@ class CheckCnpj {
         sum += int.parse(cnpj[i]) * (13 - i);
       }
     }
-    int firstDigit = 11 - (sum % 11);
+    var firstDigit = 11 - (sum % 11);
     if (firstDigit < 2) firstDigit = 0;
 
-    int sum2 = 0;
+    var sum2 = 0;
     for (var i = 0; i < 13; i++) {
       if (i <= 4) {
         sum2 += int.parse(cnpj[i]) * (6 - i);
@@ -31,9 +33,9 @@ class CheckCnpj {
         sum2 += int.parse(cnpj[i]) * (14 - i);
       }
     }
-    int secondDigit = 11 - (sum2 % 11);
+    var secondDigit = 11 - (sum2 % 11);
     if (secondDigit < 2) secondDigit = 0;
-    print('$firstDigit$secondDigit');
+    stdout.writeln('$firstDigit$secondDigit');
 
     return cnpj[12] == firstDigit.toString() &&
         cnpj[13] == secondDigit.toString();

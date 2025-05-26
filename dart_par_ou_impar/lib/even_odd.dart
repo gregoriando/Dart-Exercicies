@@ -35,8 +35,8 @@ class EvenOdd {
 }
 
 enum CheckEvenOrOdd {
-  even("O número é par"),
-  odd("O número é ímpar");
+  even('O número é par'),
+  odd('O número é ímpar');
 
   final String message;
 

@@ -9,7 +9,7 @@ class PasswordGenerator {
     required bool addSymbols,
   }) {
     if (numberOfCharacters < 8) {
-      throw ArgumentError("A senha deve ter pelo menos 8 caracteres");
+      throw ArgumentError('A senha deve ter pelo menos 8 caracteres');
     }
     final random = Random.secure();
     String upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -25,11 +25,11 @@ class PasswordGenerator {
 
     if (allCharacteres.isEmpty) {
       throw ArgumentError(
-        "Você Precisa Adicionar pelo menos um Caracter na Lista",
+        'Você Precisa Adicionar pelo menos um Caracter na Lista',
       );
     }
 
-    String password =
+    final password =
         List.generate(numberOfCharacters, (index) {
           return allCharacteres[random.nextInt(allCharacteres.length)];
         }).join();

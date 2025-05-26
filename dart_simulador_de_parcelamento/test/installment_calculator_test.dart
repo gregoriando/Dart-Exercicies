@@ -21,20 +21,20 @@ void main() {
       expect(purchase.result['total']![16], closeTo(1100.00, 0.01));
     });
     test('Mostra todas as opções de parcelamento', () {
-      String text = purchase.printInstallmentsOptions();
+      final text = purchase.printInstallmentsOptions();
       expect(text, contains('Em 1x de R\$1000.00'));
     });
     test('Retorna a parcela escolhida corretamente', () {
-      String text = purchase.chosenInstallment();
+      final text = purchase.chosenInstallment();
       expect(text, contains('Suas Parcelas são 12 de: R\$87.50'));
     });
     test('Retorna erro para parcela inválida', () {
-      InstallmentCalculator invalidPurchase = InstallmentCalculator(
+      final invalidPurchase = InstallmentCalculator(
         value: 1000.00,
         installmentNumber: 20,
       );
       invalidPurchase.calculateInstallments();
-      String text = invalidPurchase.chosenInstallment();
+      final text = invalidPurchase.chosenInstallment();
       expect(text, equals('Número de parcelas inválido.'));
     });
   });

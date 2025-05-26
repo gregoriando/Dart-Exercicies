@@ -1,11 +1,14 @@
+import 'dart:io';
 import 'package:dart_conversor_de_temperatura/temperature_converter.dart';
 
 void main() {
-  TemperatureConverter temperature = TemperatureConverter(
+  final temperature = TemperatureConverter(
     temperature: 200.0,
     type: TemperatureType.fahrenheit,
   );
-  Map<String, double> result = temperature.convert();
+  final result = temperature.convert();
 
-  result.forEach((key, value) => print("$key: ${value.toStringAsFixed(2)}"));
+  result.forEach(
+    (key, value) => stdout.writeln('$key: ${value.toStringAsFixed(2)}'),
+  );
 }

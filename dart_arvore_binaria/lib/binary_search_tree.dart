@@ -34,12 +34,12 @@ class BinarySearchTree {
 
   void preOrder() {
     _preOrderRec(root);
-    print("");
+    stdout.writeln('');
   }
 
   void _preOrderRec(Node? root) {
     if (root != null) {
-      stdout.write("${root.value} ");
+      stdout.write('${root.value} ');
       _preOrderRec(root.left);
       _preOrderRec(root.right);
     }

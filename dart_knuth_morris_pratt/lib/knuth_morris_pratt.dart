@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class KnuthMorrisPratt {
   final String text;
   final String pattern;
@@ -5,16 +7,16 @@ class KnuthMorrisPratt {
   KnuthMorrisPratt({required this.text, required this.pattern});
 
   void kmp() {
-    List<int> prefix = _computePrefix(pattern);
-    int i = 0;
-    int j = 0;
+    final prefix = _computePrefix(pattern);
+    var i = 0;
+    var j = 0;
 
     while (i < text.length) {
       if (text[i] == pattern[j]) {
         i++;
         j++;
         if (j == pattern.length) {
-          print("Padrão encontrado na posição: ${i - j}");
+          stdout.write('Padrão encontrado na posição: ${i - j}');
           j = prefix[j - 1];
         }
       } else if (j > 0) {
@@ -26,9 +28,9 @@ class KnuthMorrisPratt {
   }
 
   List<int> _computePrefix(String pattern) {
-    List<int> prefix = List.filled(pattern.length, 0);
-    int j = 0;
-    for (int i = 1; i < pattern.length; i++) {
+    final prefix = List.filled(pattern.length, 0);
+    var j = 0;
+    for (var i = 1; i < pattern.length; i++) {
       while (j > 0 && pattern[i] != pattern[j]) {
         j = prefix[j - 1];
       }

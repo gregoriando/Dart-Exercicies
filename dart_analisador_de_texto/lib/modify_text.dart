@@ -8,7 +8,7 @@ class ModifyText {
   }
 
   static List<String> wordsToLowerCase(String text) {
-    List<String> words = text.toLowerCase().split(' ');
+    final words = text.toLowerCase().split(' ');
     return words;
   }
 
@@ -17,10 +17,10 @@ class ModifyText {
   }
 
   static Map<String, int> countFrequencyOfWords(String text) {
-    List<String> words = wordsToLowerCase(text);
-    Map<String, int> frequencyOfWord = {};
+    final words = wordsToLowerCase(text);
+    final frequencyOfWord = <String, int>{};
     for (var i = 0; i < words.length; i++) {
-      String word = words[i];
+      final word = words[i];
       // usando um map podemos verificar se a palavra é nula ou diferente da palavra ele adiciona zero,
       // agora se for igual ele adiciona +1
       frequencyOfWord[word] = (frequencyOfWord[word] ?? 0) + 1;

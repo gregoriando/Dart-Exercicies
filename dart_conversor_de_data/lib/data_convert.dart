@@ -5,9 +5,9 @@ class DataConvert {
   static String convertDate(String inputDate) {
     //usa-se try e catch em situações que não temos controle da entrada por exemplo digitado pelo usuário.
     try {
-      var inputFormatter = DateFormat('yyyy-MM-dd');
-      DateTime date = inputFormatter.parse(inputDate);
-      var outputFormatter = DateFormat('dd/MM/yyyy');
+      final inputFormatter = DateFormat('yyyy-MM-dd');
+      final date = inputFormatter.parse(inputDate);
+      final outputFormatter = DateFormat('dd/MM/yyyy');
       return outputFormatter.format(date);
     } catch (e) {
       throw Exception('Formato não é válido');
@@ -16,8 +16,8 @@ class DataConvert {
 
   static String convertNumber(double number) {
     try {
-      var inputNumber = NumberFormat('#,##0.00', 'pt_BR');
-      var outputNumber = inputNumber.format(number);
+      final inputNumber = NumberFormat('#,##0.00', 'pt_BR');
+      final outputNumber = inputNumber.format(number);
       return outputNumber;
     } catch (e) {
       throw Exception('Erro no número recebido');
@@ -26,8 +26,8 @@ class DataConvert {
 
   static String convertMoney(double value) {
     try {
-      var inputValue = NumberFormat.currency(symbol: 'R\$', locale: 'pt_BR');
-      var outputValue = inputValue.format(value);
+      final inputValue = NumberFormat.currency(symbol: 'R\$', locale: 'pt_BR');
+      final outputValue = inputValue.format(value);
       return outputValue;
     } catch (e) {
       throw Exception('Erro no número recebido: $e');

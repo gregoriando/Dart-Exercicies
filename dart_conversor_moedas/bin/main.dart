@@ -1,7 +1,8 @@
+import 'dart:io';
 import 'package:dart_conversor_moedas/coin_converted.dart';
 
 void main() {
-  double realValue = 10.00;
-  String coin = 'euro';
-  print(CoinConverted.formatConversion(realValue, coin));
+  const realValue = 10.00;
+  const coin = 'euro';
+  stdout.writeln(CoinConverted.formatConversion(realValue, coin));
 }

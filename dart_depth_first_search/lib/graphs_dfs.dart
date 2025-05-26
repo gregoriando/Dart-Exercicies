@@ -14,7 +14,7 @@ class GraphsDfs {
   void dfs(String node) {
     if (visited.contains(node)) return;
 
-    stdout.write("$node ");
+    stdout.write('$node ');
     visited.add(node);
 
     for (var neighbor in graph[node]!) {

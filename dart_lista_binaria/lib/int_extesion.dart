@@ -1,10 +1,10 @@
 extension IntExtension on List<int> {
   int binarySearch(int number) {
-    int start = 0;
-    int end = length - 1;
+    var start = 0;
+    var end = length - 1;
 
     while (start <= end) {
-      int middle = (start + end) ~/ 2;
+      final middle = (start + end) ~/ 2;
       if (this[middle] == number) {
         return middle;
       } else if (this[middle] < number) {

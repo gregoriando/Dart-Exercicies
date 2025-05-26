@@ -1,15 +1,15 @@
 import 'dart:io';
 
 void main() {
-  print("Digite uma palavra para ser lida de trás para frente");
-  String word = stdin.readLineSync()!.toLowerCase();
-  print(word.myreverse());
+  stdout.write('Digite uma palavra para ser lida de trás para frente');
+  final word = stdin.readLineSync()!.toLowerCase();
+  stdout.write(word.myreverse());
 }
 
 extension StringExtension on String {
   String myreverse() {
-    String word = "";
-    for (int i = length - 1; i >= 0; i--) {
+    var word = '';
+    for (var i = length - 1; i >= 0; i--) {
       word = word + this[i];
     }
     return word;

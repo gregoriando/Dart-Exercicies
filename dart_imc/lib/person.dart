@@ -10,7 +10,7 @@ class Person {
   }
 
   String imcCategory() {
-    double value = imc();
+    final value = imc();
     if (value < 18.5) {
       return 'Abaixo do peso';
     } else if (value < 24.9) {

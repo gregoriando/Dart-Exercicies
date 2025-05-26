@@ -14,7 +14,7 @@ void main() {
       );
     });
     test('Calcula Juros Compostos', () {
-      double totalAmount = investiment.calculateCompoundInterest();
+      final totalAmount = investiment.calculateCompoundInterest();
       expect(totalAmount, closeTo(120388.05, 0.01));
     });
     test('Testa o Map reportMonth para ver se armazena mês a mês', () {

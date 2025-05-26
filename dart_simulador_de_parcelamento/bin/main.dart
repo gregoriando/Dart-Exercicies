@@ -1,15 +1,16 @@
+import 'dart:io';
 import 'package:dart_simulador_de_parcelamento/installment_calculator.dart';
 
 void main() {
-  double value = 1000.00;
-  int installmentNumber = 18;
+  const value = 1000.00;
+  const installmentNumber = 18;
 
-  InstallmentCalculator purchase = InstallmentCalculator(
+  final purchase = InstallmentCalculator(
     value: value,
     installmentNumber: installmentNumber,
   );
 
   purchase.calculateInstallments();
-  print(purchase.printInstallmentsOptions());
-  print(purchase.chosenInstallment());
+  stdout.writeln(purchase.printInstallmentsOptions());
+  stdout.writeln(purchase.chosenInstallment());
 }

@@ -1,7 +1,8 @@
+import 'dart:io';
 import 'package:dart_gerador_de_senhas/password_generator.dart';
 
 void main() {
-  String password = PasswordGenerator.generatePassword(
+  final password = PasswordGenerator.generatePassword(
     numberOfCharacters: 12,
     addUpperCase: true,
     addlowerCase: true,
@@ -9,5 +10,5 @@ void main() {
     addSymbols: true,
   );
 
-  print(password);
+  stdout.write(password);
 }
