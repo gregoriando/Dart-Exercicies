@@ -10,11 +10,11 @@ void main() {
   const cpf6 = '00000000000';
   const cpf7 = 'a91800750101';
 
-  //stdout.writeln(CheckCpf.validateCpf(cpf));
+  stdout.writeln(CheckCpf.validateCpf(cpf));
   stdout.writeln(CheckCpf.validateCpf(cpf2));
-  //stdout.writeln(CheckCpf.validateCpf(cpf3));
-  // stdout.writeln(CheckCpf.validateCpf(cpf4));
-  // stdout.writeln(CheckCpf.validateCpf(cpf5));
-  // stdout.writeln(CheckCpf.validateCpf(cpf6));
-  // stdout.writeln(CheckCpf.validateCpf(cpf7));
+  stdout.writeln(CheckCpf.validateCpf(cpf3));
+  stdout.writeln(CheckCpf.validateCpf(cpf4));
+  stdout.writeln(CheckCpf.validateCpf(cpf5));
+  stdout.writeln(CheckCpf.validateCpf(cpf6));
+  stdout.writeln(CheckCpf.validateCpf(cpf7));
 }
