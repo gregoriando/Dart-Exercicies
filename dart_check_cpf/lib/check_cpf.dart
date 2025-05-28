@@ -1,8 +1,17 @@
 class CheckCpf {
   static bool validateCpf(String cpf) {
-    cpf = cpf.replaceAll(RegExp(r'[^0-9]'), '');
+    if (!RegExp(r'^[0-9.-]+$').hasMatch(cpf)) {
+      return false;
+    } else {
+      cpf = cpf.replaceAll(RegExp(r'[^0-9]'), '');
+    }
 
-    if (cpf.length != 11 || RegExp(r'^(\d)\1*$').hasMatch(cpf)) return false;
+    if (cpf.length != 11) return false;
+
+    if (RegExp(r'^(\d)\1*$').hasMatch(cpf)) return false;
+
+    if (cpf.length > 11) return false;
+
     var sum = 0;
 
     for (var i = 0; i < 9; i++) {

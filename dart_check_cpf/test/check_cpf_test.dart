@@ -15,9 +15,32 @@ void main() {
       const cpf = '715.583.830-69';
       expect(CheckCpf.validateCpf(cpf), equals(true));
     });
-
-    test('Verifica se Cpf é inválido', () {
-      const cpf = '715.583.830-60';
+    test('sem caracteres especiais', () {
+      const cpf = '71558383069';
+      expect(CheckCpf.validateCpf(cpf), equals(true));
+    });
+    test('parcialmente caracteres especiais', () {
+      const cpf = '291800750-10';
+      expect(CheckCpf.validateCpf(cpf), equals(true));
+    });
+    test('parcialmente caracteres especiais', () {
+      const cpf = '291.80075010';
+      expect(CheckCpf.validateCpf(cpf), equals(true));
+    });
+    test('inválido, porém sem caracteres especiais', () {
+      const cpf = '00000000000';
+      expect(CheckCpf.validateCpf(cpf), equals(false));
+    });
+    test('com letras', () {
+      const cpf = 'a91800750101';
+      expect(CheckCpf.validateCpf(cpf), equals(false));
+    });
+    test('com caracteres especiais invalido', () {
+      const cpf = '291.800750#10';
+      expect(CheckCpf.validateCpf(cpf), equals(false));
+    });
+    test('com mais de 11 números', () {
+      const cpf = '291.800750101';
       expect(CheckCpf.validateCpf(cpf), equals(false));
     });
   });

@@ -1,11 +1,20 @@
+import 'dart:io';
 import 'package:dart_check_cpf/check_cpf.dart';
 
 void main() {
-  String cpf = '715.583.830-69';
-  String cpf2 = '111.111.111-11';
-  String cpf3 = '291.800.750-10';
+  const cpf = '71558383069';
+  const cpf2 = '111.111.111-11';
+  const cpf3 = '291.800.750-10';
+  const cpf4 = '291800750-10';
+  const cpf5 = '291.800750101';
+  const cpf6 = '00000000000';
+  const cpf7 = 'a91800750101';
 
-  print(CheckCpf.validateCpf(cpf));
-  print(CheckCpf.validateCpf(cpf2));
-  print(CheckCpf.validateCpf(cpf3));
+  stdout.writeln(CheckCpf.validateCpf(cpf));
+  stdout.writeln(CheckCpf.validateCpf(cpf2));
+  stdout.writeln(CheckCpf.validateCpf(cpf3));
+  stdout.writeln(CheckCpf.validateCpf(cpf4));
+  stdout.writeln(CheckCpf.validateCpf(cpf5));
+  stdout.writeln(CheckCpf.validateCpf(cpf6));
+  stdout.writeln(CheckCpf.validateCpf(cpf7));
 }
