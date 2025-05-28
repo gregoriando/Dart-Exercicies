@@ -2,23 +2,9 @@ class CheckCpf {
   static bool validateCpf(String cpf) {
     if (!RegExp(r'^[0-9.-]+$').hasMatch(cpf)) {
       return false;
-    } else if (RegExp(r'^\d{9}-\d{2}$').hasMatch(cpf)) {
+    } else {
       cpf = cpf.replaceAll(RegExp(r'[^0-9]'), '');
-      if (validateCpf(cpf) == true) {
-        return true;
-      } else {
-        return false;
-      }
-    } else if (RegExp(r'^\d{3}\.\d{8}$').hasMatch(cpf)) {
-      cpf = cpf.replaceAll(RegExp(r'[^0-9]'), '');
-      if (validateCpf(cpf) == true) {
-        return true;
-      } else {
-        return false;
-      }
     }
-
-    cpf = cpf.replaceAll(RegExp(r'[^0-9]'), '');
 
     if (cpf.length != 11) return false;
 
