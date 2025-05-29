@@ -1,4 +1,4 @@
-import 'package:dart_check_credit_card/check_credit_card.dart';
+import 'package:dart_check_credit_card/check_credit_cart_original.dart';
 import 'package:test/test.dart';
 
 void main() {
