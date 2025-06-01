@@ -9,8 +9,6 @@ void main() {
     value: value,
     installmentNumber: installmentNumber,
   );
-
-  purchase.calculateInstallments();
   stdout.writeln(purchase.printInstallmentsOptions());
   stdout.writeln(purchase.chosenInstallment());
 }

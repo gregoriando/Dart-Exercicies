@@ -6,19 +6,18 @@ void main() {
     late InstallmentCalculator purchase;
     setUp(() {
       purchase = InstallmentCalculator(value: 1000.00, installmentNumber: 12);
-      purchase.calculateInstallments();
     });
     test('Calcula parcelas até 10x sem juros', () {
-      expect(purchase.result['installments']![9], closeTo(100.00, 0.01));
-      expect(purchase.result['total']![9], closeTo(1000.00, 0.01));
+      expect(purchase.data[9].installment, closeTo(100.00, 0.01));
+      expect(purchase.data[9].total, closeTo(1000.00, 0.01));
     });
     test('Calcula parcelas entre 11x e 15x com 5% de juros', () {
-      expect(purchase.result['installments']![11], closeTo(87.50, 0.01));
-      expect(purchase.result['total']![11], closeTo(1050.00, 0.01));
+      expect(purchase.data[11].installment, closeTo(87.50, 0.01));
+      expect(purchase.data[11].total, closeTo(1050.00, 0.01));
     });
     test('Calcula parcelas entre 16x e 18x com 10% de juros', () {
-      expect(purchase.result['installments']![16], closeTo(64.71, 0.01));
-      expect(purchase.result['total']![16], closeTo(1100.00, 0.01));
+      expect(purchase.data[16].installment, closeTo(64.71, 0.01));
+      expect(purchase.data[16].total, closeTo(1100.00, 0.01));
     });
     test('Mostra todas as opções de parcelamento', () {
       final text = purchase.printInstallmentsOptions();
@@ -33,9 +32,8 @@ void main() {
         value: 1000.00,
         installmentNumber: 20,
       );
-      invalidPurchase.calculateInstallments();
       final text = invalidPurchase.chosenInstallment();
-      expect(text, equals('Número de parcelas inválido.'));
+      expect(text, equals('Número de parcelas inválido'));
     });
   });
 }

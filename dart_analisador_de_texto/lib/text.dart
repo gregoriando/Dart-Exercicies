@@ -1,6 +1,6 @@
 class Text extends StringBuffer {
   Text([String super.initial]);
-
+  // toString pega o texto inteiro e deixa ele montado
   String reverseText() {
     return toString().split('').reversed.join();
   }
