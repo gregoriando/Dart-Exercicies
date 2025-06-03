@@ -1,11 +1,29 @@
 import 'dart:io';
-
-import 'package:dart_check_cnpj/check_cnpj.dart';
+import 'package:dart_check_cnpj/cnpj.dart';
 
 void main() {
-  const cnpj = '58.131.582/0001-25';
-  const cnpj2 = '11.111.111/1111-11';
-
-  stdout.writeln(CheckCnpj.validadeCnpj(cnpj));
-  stdout.writeln(CheckCnpj.validadeCnpj(cnpj2));
+  try {
+    final cnpj = Cnpj('45723174000110');
+    stdout.writeln('CNPJ válido: ${cnpj.toStringFormatted()}');
+  } catch (e) {
+    stdout.writeln('Erro: $e');
+  }
+  try {
+    final cnpj = Cnpj('457231740001102');
+    stdout.writeln('CNPJ válido: ${cnpj.toStringFormatted()}');
+  } catch (e) {
+    stdout.writeln('Erro: $e');
+  }
+  try {
+    final cnpj = Cnpj('45723174000110');
+    stdout.writeln('CNPJ válido: ${cnpj.toStringFormatted()}');
+  } catch (e) {
+    stdout.writeln('Erro: $e');
+  }
+  try {
+    final cnpj = Cnpj('11111111111111');
+    stdout.writeln('CNPJ válido: ${cnpj.toStringFormatted()}');
+  } catch (e) {
+    stdout.writeln('Erro: $e');
+  }
 }
